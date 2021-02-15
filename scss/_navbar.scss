@@ -1,0 +1,115 @@
+nav {
+    font-family: $arial;
+    background-color: white;
+    border-bottom: 1px solid $hr;
+    padding: 7px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+    }
+
+    .left {
+        .magnifier,
+        a {
+            display: none;
+        }
+    }
+
+    .center {
+        width: 200px;
+        text-align: center;
+        svg {
+            width: 100%;
+            height: 20px;
+        }
+    }
+
+    .right {
+        .nav-button {
+            display: none;
+        }
+    }
+}
+
+.subNav {
+    display: none;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    a {
+        font-size: 10px;
+        color: #326891;
+        text-transform: uppercase;
+        &:first-child {
+            padding-right: 7px;
+            border-right: 1px solid gray;
+        }
+        &:last-child {
+            padding-left: 7px;
+        }
+    }
+}
+
+@media (min-width: 1020px) {
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        font-size: 14px;
+
+        .left {
+            width: 220px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .magnifier,
+            a {
+                display: inline;
+            }
+
+            a {
+                color: black;
+                text-transform: uppercase;
+                font-weight: bold;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .right {
+            .user {
+                display: none;
+            }
+            .nav-button {
+                display: inline;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: bold;
+                border: 1px solid blue;
+                padding: 7px 15px;
+                border-radius: 2px;
+                background-color: #3978a8;
+                color: white;
+                transition: all .5s;
+                font-size: 12px;
+                &:hover {
+                    background-color: #2a5575;
+                }
+            }
+        }
+
+        .nav-buttons {
+            display: block;
+        }
+    }
+    .subNav {
+        display: none;
+    }
+}
