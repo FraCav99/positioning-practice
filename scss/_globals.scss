@@ -2,7 +2,7 @@ $arial: Arial, Helvetica, sans-serif;
 $georgia: Georgia, 'Times New Roman', Times, serif;
 $blue: #326891;
 $lightGray: rgb(102, 102, 102);
-$midBlakc: rgb(51, 51, 51);
+$midBlack: rgb(51, 51, 51);
 $hr: #E9E9E9;
 
 
@@ -18,4 +18,8 @@ a {
 
 ul {
     list-style: none;
+}
+
+hr {
+    border: 1px solid $hr;
 }

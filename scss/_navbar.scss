@@ -2,10 +2,11 @@ nav {
     font-family: $arial;
     background-color: white;
     border-bottom: 1px solid $hr;
-    padding: 7px 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 99;
 
     svg {
         cursor: pointer;
@@ -41,6 +42,7 @@ nav {
     padding: 10px 20px;
     display: flex;
     justify-content: flex-end;
+    font-family: $arial;
     a {
         font-size: 10px;
         color: #326891;

@@ -1,0 +1,126 @@
+article {
+    h1 {
+        font-family: $georgia;
+        font-style: italic;
+        font-size: 31px;
+        width: calc(100% - 40px);
+        max-width: 600px;
+        margin: 0 auto 20px;
+        line-height: 1.5;
+    }
+    .social_share {
+        position: relative;
+        display: flex;
+        width: calc(100% - 40px);
+        max-width: 600px;
+        border-top: 1px solid $hr;
+        padding-top: 20px;
+        margin: 0 auto 20px;
+        .social-icon {
+            border-radius: 50%;
+            border: 1px solid $hr;
+            background-color: $hr;
+            cursor: pointer;
+            padding: 7px 10px;
+            margin: 0 10px;
+            border: none;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:hover {
+                background-color: white;
+                box-shadow: 0 0 0 1px $hr inset;
+            }
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .comment-counter {
+            position: relative;
+            span {
+                cursor: pointer;
+                font-family: $arial;
+                position: absolute;
+                right: 7px;
+                top: 7px;
+                font-size: 10px;
+                z-index: -1;
+            }
+        }
+        .comments,
+        .bookmark {
+            padding-top: 4px;
+            cursor: pointer;
+            &:hover {
+                path {
+                    fill: #ccc;
+                }
+            }
+        }
+    }
+    .headerImg_container {
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .cosmos-caption-container {
+        padding: 10px 20px;
+        margin-bottom: 30px;
+        .cosmos-caption {
+            color: $midBlack;
+            font-family: $georgia;
+            span {
+                color: rgb(136, 136, 136);
+            }
+        }
+    }
+
+    .author {
+        padding: 0 20px;
+        font-family: $arial;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        .author-name {
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+            span {
+                cursor: pointer;
+                border-bottom: 1px solid gray;
+                &:hover {
+                    border-bottom: none;
+                }
+            }
+        }
+        .date {
+            font-weight: 500;
+            font-size: 13px;
+            margin-top: 30px;
+            color: #121212;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    article {
+        .headerImg_container {
+            max-width: 945px;
+            height: auto;
+            margin: auto;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .cosmos-caption-container {
+                padding-left: 0;
+                padding-right: 270px;
+            }
+        }
+    }
+}
