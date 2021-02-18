@@ -1,9 +1,14 @@
 @import './articleHeader';
 @import './articleBody';
+@import './footer';
 
 // article {
    
 // }
+
+.footer-desktop {
+    display: none;
+}
 
 @media screen and (min-width: 1024px) {
     article {
