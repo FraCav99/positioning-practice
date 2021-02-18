@@ -2,16 +2,110 @@
 @import './articleBody';
 @import './footer';
 
-// article {
-   
-// }
-
-.footer-desktop {
-    display: none;
+.footer {
+    .footer-grid {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     article {
         margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .footer {
+        .footer-content {
+            .footer-header {
+                border: none;
+                color: #333;
+            }
+        }
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        .footer-links {
+            display: none;
+        }
+        .footer-grid {
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: 80% 20%;
+            .related {
+                display: grid;
+                grid-template-columns: repeat(5, 16%);
+                justify-content: space-between;
+                .related-list {
+                    .related-list-title {
+                        text-transform: uppercase;
+                        font-size: 14px;
+                    }
+                    .related-items {
+                        .related-item {
+                            margin: 10px 0;
+                            font-size: 14px;
+                            a {
+                                color: #000;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .subscribe {
+                border-left: 1px solid #EBEBEB;
+                .top-div {
+                    padding-left: 10px;
+                    .related-list-title {
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        color: #333;
+                    }
+                    .services-list {
+                        .services-items {
+                            .service-item {
+                                margin: 10px 0;
+                                svg {
+                                    width: 15px;
+                                    height: 100%;
+                                }
+                                span {
+                                    font-weight: bold;
+                                    &:hover {
+                                        cursor: pointer;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .misc-1,
+                .misc-2 {
+                    border-bottom: 1px solid #EBEBEB;
+                    margin: 10px;
+                    font-size: 10px;
+                    .misc-item {
+                        padding: 5px 0;
+                        &:hover {
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .misc-2 {
+                    border: none;
+                }
+            }
+        }
+
+        .copyright {
+            .hide {
+                display: none;
+            }
+        }
     }
 }
